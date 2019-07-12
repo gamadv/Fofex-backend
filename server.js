@@ -1,18 +1,18 @@
-/* Importação do Express através 
-do método require, parâmetro Express
-Acesso ao Express
-*/
+/* Importações através do método require */
 const express = require('express');
+const mongoose = require ('mongoose');
 
-/* Executando Função do Express.
-Express retorna função
-*/
+//======================================== INICIANDO APP#
+// Executando Função do Express que retorna função 
 const app = express();
 
-///####### ROTAS
-/* O que ocorrer ao acessar a rota
-'/' = rota raiz
-*/
+//======================================== INICIANDO DB#
+
+
+
+//======================================== ROTAS#
+//* O que ocorrer ao acessar a rota '/' = rota raizz
+
 app.get('/',(req,res)=>{
     res.send('Teste Bagaça32444444444')
 });
