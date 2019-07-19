@@ -9,6 +9,7 @@ const ProductController = require('./controllers/ProductController');
 GET: Recuperar info
 POST: Gravar Info */
 routes.get('/products', ProductController.index);
+routes.get('/products/:id', ProductController.show);
 routes.post('/products', ProductController.store);
 
 // importar para Utilizar dentro do server JS
