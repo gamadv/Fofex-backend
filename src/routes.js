@@ -8,7 +8,8 @@ const ProductController = require('./controllers/ProductController');
 /* Chamando método index do controller. 
 GET: Recuperar info
 POST: Gravar Info, rota para criar
-PUT: Alterar dados */
+PUT: Alterar dados 
+DELETE: Deletar Dados*/
 routes.get('/products', ProductController.index);
 routes.get('/products/:id', ProductController.show);
 routes.post('/products', ProductController.store);
