@@ -1,6 +1,6 @@
 // ------------- mvC -----------------\\
-
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 // Campos são passados como objeto dentro do SCHEMA ({obj})
 const ProductSchema = new mongoose.Schema({
@@ -24,6 +24,8 @@ const ProductSchema = new mongoose.Schema({
     },
 });
 
+
+ProductSchema.plugin(mongoosePaginate);
 
 // Registro do Model na app.
 mongoose.model('Product', ProductSchema);

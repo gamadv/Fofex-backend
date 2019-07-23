@@ -7,10 +7,13 @@ const ProductController = require('./controllers/ProductController');
 //_______O que ocorrer ao acessar a rota '/' = rota raiz
 /* Chamando método index do controller. 
 GET: Recuperar info
-POST: Gravar Info */
+POST: Gravar Info, rota para criar
+PUT: Alterar dados */
 routes.get('/products', ProductController.index);
 routes.get('/products/:id', ProductController.show);
 routes.post('/products', ProductController.store);
+routes.put('/products/:id', ProductController.update);
+routes.delete('/products/:id', ProductController.destroy);
 
 // importar para Utilizar dentro do server JS
 module.exports = routes;
