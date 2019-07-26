@@ -22,8 +22,18 @@ app.use(cors());
 
 //INICIANDO DB#=======================================
 //_____________Mudar IP ao trocar de WORKSPACE!
-mongoose.connect('mongodb://localhost:27017/nodeapi',{ useNewUrlParser: true});
+// -> 
+// mongoose.connect('mongodb://192.168.99.100:27017/nodeapi',{ useNewUrlParser: true});
+mongoose.connect('mongodb+srv://nodeapi:4812012@cluster0-by1ky.mongodb.net/test?retryWrites=true&w=majority',{
+    useNewUrlParser: true,
+})
+
 requireDir('./src/models/');
+
+/* ----> Mongo DB Altas
+    mongoose.connect('mongodb+srv://nodeapi:4812012@cluster0-by1ky.mongodb.net/test?retryWrites=true&w=majority',{
+        useNewUrlParser: true, })
+*/
 
 // ROTAS#==============================================
 /* Coringa: Receber todo tipo de requisição apartir da rota api
