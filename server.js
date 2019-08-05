@@ -40,8 +40,6 @@ requireDir('./src/models/');
 E mandar para o src rout*/ 
 app.use('/api', require('./src/routes'));
 
-
-
 //Ouvinte de porta -> 3001
 app.listen(process.env.Port || 3333);
 
