@@ -41,6 +41,6 @@ E mandar para o src rout*/
 app.use('/api', require('./src/routes'));
 
 //Ouvinte de porta -> 3001
-app.listen(process.env.Port || 3333);
+app.listen(process.env.PORT || 3333);
 
 // Acesso para variáveis de ambiente do heroku

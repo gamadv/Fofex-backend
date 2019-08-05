@@ -25,6 +25,12 @@ const ProductSchema = new mongoose.Schema({
 });
 
 
+
+const url = process.env.URL || "http://localhost:3333"
+
+
+
+
 ProductSchema.plugin(mongoosePaginate);
 
 // Registro do Model na app.
