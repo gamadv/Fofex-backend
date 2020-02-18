@@ -9,15 +9,12 @@ const mongoose = require ('mongoose');
 const requireDir = require ('require-dir');
 
 //INICIANDO APP# ===================================== 
-//_______________Executando Função do Express que retorna função 
 const app = express();
 
-/* Permite enviar dados para o app em 
-Form Json */
+/* Permite enviar dados para o app em Form Json */
 app.use(express.json());
-/*
-Permite acesso de outros endereços ao app
-*/
+
+/*Permite acesso de outros endereços ao app*/
 app.use(cors());
 
 //INICIANDO DB#=======================================
@@ -29,11 +26,6 @@ mongoose.connect('mongodb+srv://nodeapi:4812012@cluster0-by1ky.mongodb.net/test?
 })
 
 requireDir('./src/models/');
-
-/* ----> Mongo DB Altas
-    mongoose.connect('mongodb+srv://nodeapi:4812012@cluster0-by1ky.mongodb.net/test?retryWrites=true&w=majority',{
-        useNewUrlParser: true, })
-*/
 
 // ROTAS#==============================================
 /* Coringa: Receber todo tipo de requisição apartir da rota api
